@@ -4,11 +4,7 @@ import "fmt"
 import "math"
 
 
-func main() {
-	my_test()
-}
-
-func my_test() {
+func main () {
 	var num float64;
 	var ex string;
 
