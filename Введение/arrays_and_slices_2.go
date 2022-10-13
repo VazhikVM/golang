@@ -12,7 +12,7 @@ func main() {
 	var a int
 	for i := 0; i < 5; i++ {
 		fmt.Printf("Введите число № %d: ", i+1)
-		fmt.Scan(&a)
+		a, _ := fmt.Scan(&a)
 		array[i] = a
 	}
 	var maxNumber int
