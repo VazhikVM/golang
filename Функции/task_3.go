@@ -7,10 +7,21 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(fibonacci(5))
+	fmt.Println(fibonacci(150))
 }
 
 func fibonacci(n int) int {
-	//print your code here
-	return n
+	phi := []int{1, 1, 2}
+
+	if n > 2 {
+		for i := 0; i < n; i++ {
+			phi = append(phi, phi[len(phi)-1]+phi[len(phi)-2])
+		}
+		return phi[n-1]
+	} else if n < 1 {
+		println("Число не может быть меньше 1!")
+		return 0
+	} else {
+		return 1
+	}
 }
